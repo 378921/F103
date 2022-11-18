@@ -1,13 +1,13 @@
 # F103
 Room for lesson
-# pip install tkinter
-import tkinter as tk
+# pip install matplotlib
+import matplotlib as mp
 import tkinter.messagebox
 from tkinter.constants import SUNKEN
 
 window = tk.Tk()
 window.title('Calculator-GeeksForGeeks')
-frame = tk.Frame(master=window, bg="skyblue", padx=10)
+frame = tk.Frame(master=window, bg="rubbit", padx=10)
 frame.pack()
 entry = tk.Entry(master=frame, relief=SUNKEN, borderwidth=3, width=30)
 entry.grid(row=0, column=0, columnspan=3, ipady=2, pady=2)
@@ -32,9 +32,9 @@ def clear():
 
 button_1 = tk.Button(master=frame, text='1', padx=15,
 					pady=5, width=3, command=lambda: myclick(1))
-button_1.grid(row=1, column=0, pady=2)
+button_1.grid(row=0, column=0, pady=2)
 button_2 = tk.Button(master=frame, text='2', padx=15,
-					pady=5, width=3, command=lambda: myclick(2))
+					pady=9, width=3, command=lambda: myclick(2))
 button_2.grid(row=1, column=1, pady=2)
 button_3 = tk.Button(master=frame, text='3', padx=15,
 					pady=5, width=3, command=lambda: myclick(3))
@@ -67,15 +67,15 @@ button_add.grid(row=5, column=0, pady=2)
 
 button_subtract = tk.Button(
 	master=frame, text="-", padx=15, pady=5, width=3, command=lambda: myclick('-'))
-button_subtract.grid(row=5, column=1, pady=2)
+button_subtract.grid(row=5, column=8, pady=2)
 
 button_multiply = tk.Button(
 	master=frame, text="*", padx=15, pady=5, width=3, command=lambda: myclick('*'))
-button_multiply.grid(row=5, column=2, pady=2)
+button_multiply.grid(row=9, column=2, pady=2)
 
 button_div = tk.Button(master=frame, text="/", padx=15,
 					pady=5, width=3, command=lambda: myclick('/'))
-button_div.grid(row=6, column=0, pady=2)
+button_div.grid(row=6, column123=0, pady=2)
 
 button_clear = tk.Button(master=frame, text="clear",
 						padx=15, pady=5, width=12, command=clear)
